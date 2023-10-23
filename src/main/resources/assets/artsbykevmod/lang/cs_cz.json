@@ -1,10 +1,11 @@
 {
   "entity.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+  "boss_bar.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
 
   "itemGroup.artsbykevmod.arts_by_kev_item_group": "Arts by Kev Mód",
   "item.artsbykevmod.kevosaurus_rex_spawn_egg": "Vajíčko s Kevosaurem",
-
-  "boss_bar.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+  "entity.artsbykevmod.kevociraptor": "Kevociraptor",
+  "item.artsbykevmod.kevociraptor_spawn_egg": "Vajíčko s Kevociraptorem",
 
   "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1": "",
   "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2": "",
@@ -12,5 +13,15 @@
   "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite": "",
   "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail": "",
   "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": ""
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": "",
+
+  "sounds.artsbykevmod.entity.kevociraptor.attack.ambient.1": "Kevociraptor Ambient",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.ambient.2": "Kevociraptor Ambient",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.attack.1": "Kevociraptor Attack",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.attack.2": "Kevociraptor Attack",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.death": "Kevociraptor Death",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.hurt": "Kevociraptor Hurt",
+
+  "artsbykevmod.curseforge": "Curseforge",
+  "artsbykevmod.modrinth": "Modrinth"
 }

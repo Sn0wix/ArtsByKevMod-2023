@@ -1,39 +1,48 @@
 {
-	"schemaVersion": 1,
-	"id": "artsbykevmod",
-	"version": "${version}",
-	"name": "artsbykevmod",
-	"description": "Mod made for the 2023 competition.",
-	"authors": [
-		"Sn0wix_",
-		"BubbaGump7"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/artsbykevmod/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-          "net.sn0wix_.ArtsByKevModMain"
-		],
-		"client": [
-			"net.sn0wix_.ArtsByKevModClient"
-		]
-	},
-	"mixins": [
-		"artsbykevmod.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.19.4",
-		"java": ">=17",
-		"geckolib": ">=4.1.3",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "artsbykevmod",
+  "version": "${version}",
+  "name": "Arts by Kev mod 2023",
+  "description": "Mod made for the 2023 competition.",
+  "authors": [
+    "Sn0wix_",
+    "BubbaGump7"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/arts-by-kev-mod-2023",
+    "sources": "https://github.com/Sn0wix/ArtsByKevMod-2023",
+    "issues": "https://github.com/Sn0wix/ArtsByKevMod-2023/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/artsbykevmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.sn0wix_.ArtsByKevModMain"
+    ],
+    "client": [
+      "net.sn0wix_.ArtsByKevModClient"
+    ]
+  },
+  "mixins": [
+    "artsbykevmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.19.4",
+    "java": ">=17",
+    "geckolib": ">=4.1.3",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "geckolib": "https://modrinth.com/mod/geckolib"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "artsbykevmod.curseforge": "",
+        "artsbykevmod.modrinth": "https://modrinth.com/mod/arts-by-kev-mod-2023"
+      }
+    }
+  }
 }
