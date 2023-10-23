@@ -1,0 +1,82 @@
+{
+  "entity.kevosaurus_rex.ambient.1": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_ambient_1"
+    ]
+  },
+  "entity.kevosaurus_rex.ambient.2": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_ambient_2"
+    ]
+  },
+  "entity.kevosaurus_rex.death": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.death",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_death"
+    ]
+  },
+  "entity.kevosaurus_rex.attack.bite": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_attack_bite"
+    ]
+  },
+  "entity.kevosaurus_rex.attack.tail": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_attack_tail"
+    ]
+  },
+  "entity.kevosaurus_rex.attack.stomp": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_attack_stomp"
+    ]
+  },
+  "entity.kevosaurus_rex.attack.roar": {
+    "subtitle": "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar",
+    "sounds": [
+      "artsbykevmod:entity_kevosaurus_rex_attack_roar"
+    ]
+  },
+
+
+  "entity.kevociraptor.ambient.1": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.ambient.1",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_ambient_1"
+    ]
+  },
+  "entity.kevociraptor.ambient.2": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.ambient.2",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_ambient_2"
+    ]
+  },
+  "entity.kevociraptor.attack.1": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.attack.1",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_attack_1"
+    ]
+  },
+  "entity.kevociraptor.attack.2": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.attack.2",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_attack_2"
+    ]
+  },
+  "entity.kevociraptor.hurt": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.hurt",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_hurt"
+    ]
+  },
+  "entity.kevociraptor.death": {
+    "subtitle": "sounds.artsbykevmod.entity.kevociraptor.death",
+    "sounds": [
+      "artsbykevmod:entity_kevociraptor_death"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "artsbykevmod",
+	"version": "${version}",
+	"name": "artsbykevmod",
+	"description": "Mod made for the 2023 competition.",
+	"authors": [
+		"Sn0wix_",
+		"BubbaGump7"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/artsbykevmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.sn0wix_.ArtsByKevModMain"
+		],
+		"client": [
+			"net.sn0wix_.ArtsByKevModClient"
+		]
+	},
+	"mixins": [
+		"artsbykevmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"geckolib": ">=4.1.3",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

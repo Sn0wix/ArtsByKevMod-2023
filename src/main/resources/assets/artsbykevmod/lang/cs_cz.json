@@ -1,0 +1,16 @@
+{
+  "entity.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+
+  "itemGroup.artsbykevmod.arts_by_kev_item_group": "Arts by Kev Mód",
+  "item.artsbykevmod.kevosaurus_rex_spawn_egg": "Vajíčko s Kevosaurem",
+
+  "boss_bar.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.death": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp": "",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": ""
+}

@@ -1,0 +1,17 @@
+{
+  "entity.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+  "entity.artsbykevmod.kevociraptor": "Kevociraptor",
+
+  "itemGroup.artsbykevmod.arts_by_kev_item_group": "Arts by Kev Mod Item Group",
+  "item.artsbykevmod.kevosaurus_rex_spawn_egg": "Kevosaurus Spawn Egg",
+  "item.artsbykevmod.kevociraptor_spawn_egg": "Kevociraptor Spawn Egg",
+  "boss_bar.artsbykevmod.kevosaurus_rex": "Kevosaurus Rex",
+
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1": "Kevosaurus Rex Ambient",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2": "Kevosaurus Rex Ambient",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.death": "Kevosaurus Rex Death",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite": "Kevosaurus Rex Bite",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail": "Kevosaurus Rex Attack Tail",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp": "Kevosaurus Rex Stomp",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": "Kevosaurus Rex Roar"
+}
