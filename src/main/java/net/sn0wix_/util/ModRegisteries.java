@@ -2,6 +2,7 @@ package net.sn0wix_.util;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.sn0wix_.entity.ModEntities;
+import net.sn0wix_.entity.custom.ArtsByKevEntity;
 import net.sn0wix_.entity.custom.KevociraptorEntity;
 import net.sn0wix_.entity.custom.KevosaurusRexEntity;
 
@@ -13,5 +14,6 @@ public class ModRegisteries {
     private static void registerAttributes(){
         FabricDefaultAttributeRegistry.register(ModEntities.KEVOSAURUS_REX, KevosaurusRexEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.KEVOCIRAPTOR, KevociraptorEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.ARTS_BY_KEV, ArtsByKevEntity.setAttributes());
     }
 }

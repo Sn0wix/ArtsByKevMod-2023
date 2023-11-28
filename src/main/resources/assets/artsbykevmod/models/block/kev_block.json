@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "artsbykevmod:block/kev_block"
+  }
+}

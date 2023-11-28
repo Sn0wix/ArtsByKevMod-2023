@@ -40,7 +40,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "artsbykevmod.curseforge": "",
+        "artsbykevmod.curseforge": "https://curseforge.com/minecraft/mc-mods/arts-by-kev-mod-2023",
         "artsbykevmod.modrinth": "https://modrinth.com/mod/arts-by-kev-mod-2023"
       }
     }

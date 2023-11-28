@@ -6,22 +6,29 @@
   "item.artsbykevmod.kevosaurus_rex_spawn_egg": "Vajíčko s Kevosaurem",
   "entity.artsbykevmod.kevociraptor": "Kevociraptor",
   "item.artsbykevmod.kevociraptor_spawn_egg": "Vajíčko s Kevociraptorem",
+  "item.artsbykevmod.kev_ingot": "Kev Ingot",
+  "item.artsbykevmod.arts_by_kev_spawn_egg": "Vajíčko s Arts By Kevem",
 
-  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.death": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp": "",
-  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": "",
+  "block.artsbykevmod.kev_block": "Kev Blok",
 
-  "sounds.artsbykevmod.entity.kevociraptor.attack.ambient.1": "Kevociraptor Ambient",
-  "sounds.artsbykevmod.entity.kevociraptor.attack.ambient.2": "Kevociraptor Ambient",
-  "sounds.artsbykevmod.entity.kevociraptor.attack.attack.1": "Kevociraptor Attack",
-  "sounds.artsbykevmod.entity.kevociraptor.attack.attack.2": "Kevociraptor Attack",
-  "sounds.artsbykevmod.entity.kevociraptor.attack.death": "Kevociraptor Death",
-  "sounds.artsbykevmod.entity.kevociraptor.attack.hurt": "Kevociraptor Hurt",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.1": "Kevosaurus Rex",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.ambient.2": "Kevosaurus Rex",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.death": "Smrt Kevosaura Rexe",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.bite": "Kousnutí Kevosaura Rexe",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.tail": "Švihnutí Ocasem Kevosaura Rexe",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.stomp": "Dupnutí Kevosaura Rexe",
+  "sounds.artsbykevmod.entity.kevosaurus_rex.attack.roar": "Řev Kevosaura Rexe",
+
+  "sounds.artsbykevmod.entity.kevociraptor.ambient.1": "Kevociraptor",
+  "sounds.artsbykevmod.entity.kevociraptor.ambient.2": "Kevociraptor",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.1": "Útok Kevociraptora",
+  "sounds.artsbykevmod.entity.kevociraptor.attack.2": "Útok Kevociraptora",
+  "sounds.artsbykevmod.entity.kevociraptor.death": "Smrt Kevociraptora",
+  "sounds.artsbykevmod.entity.kevociraptor.hurt": "Zranění Kevociraptora",
+
+
 
   "artsbykevmod.curseforge": "Curseforge",
-  "artsbykevmod.modrinth": "Modrinth"
+  "artsbykevmod.modrinth": "Modrinth",
+  "text.artsbykevmod.subscribe": "Subscribe to Arts by Kev!",
 }

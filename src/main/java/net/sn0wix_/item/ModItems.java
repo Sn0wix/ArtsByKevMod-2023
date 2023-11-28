@@ -18,17 +18,20 @@ public class ModItems {
     public static final Item KEVOCIRAPTOR_SPAWN_EGG = registerItem("kevociraptor_spawn_egg",
             new SpawnEggItem(ModEntities.KEVOCIRAPTOR, 7025684, 5046016, new FabricItemSettings()));
 
-    private static void addItemsToGroups(){
-        addToItemGroup(KEVOSAURUS_REX_SPAWN_EGG);
-        addToItemGroup(KEVOCIRAPTOR_SPAWN_EGG);
-    }
+    public static final Item ARTS_BY_KEV_SPAWN_EGG = registerItem("arts_by_kev_spawn_egg",
+            new SpawnEggItem(ModEntities.ARTS_BY_KEV, 8896850, 16773250, new FabricItemSettings()));
+
+    public static final Item KEV_INGOT = registerItem("kev_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
 
     private static Item registerItem(String name, Item item){
-        return Registry.register(Registries.ITEM,new Identifier(ArtsByKevModMain.MOD_ID,name),item);
+        Item item1 = Registry.register(Registries.ITEM,new Identifier(ArtsByKevModMain.MOD_ID,name),item);
+        addToItemGroup(item1);
+        return item1;
     }
 
     public static void registerModItems(){
-        addItemsToGroups();
         ArtsByKevModMain.LOGGER.info("Registering Mod Items for " + ArtsByKevModMain.MOD_ID);
     }
 

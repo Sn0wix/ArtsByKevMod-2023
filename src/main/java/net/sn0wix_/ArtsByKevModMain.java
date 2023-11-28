@@ -2,6 +2,8 @@ package net.sn0wix_;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.sn0wix_.blocks.ModBlocks;
+import net.sn0wix_.entity.ModEntities;
 import net.sn0wix_.item.ModItems;
 import net.sn0wix_.networking.ModPackets;
 import net.sn0wix_.sounds.ModSounds;
@@ -17,9 +19,11 @@ public class ArtsByKevModMain implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModRegisteries.registerModStuffs();
 		ModSounds.registerModSounds();
 		ModPackets.registerC2SPackets();
+		ModEntities.registerModEntities();
 
 		GeckoLib.initialize();
 	}
