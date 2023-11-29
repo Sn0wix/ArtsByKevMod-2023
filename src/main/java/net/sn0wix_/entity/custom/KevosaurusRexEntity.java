@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -27,6 +28,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.sn0wix_.entity.ModEntities;
 import net.sn0wix_.networking.ModPackets;
@@ -69,8 +71,10 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
         this.goalSelector.add(1, new MeleeAttackGoal(this, 2.2, false));
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(6, new RevengeGoal(this, KevosaurusRexEntity.class, KevociraptorEntity.class));
+        this.goalSelector.add(0, new SwimGoal(this));
 
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ArtsByKevEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PigEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WanderingTraderEntity.class, true));
@@ -211,13 +215,19 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
                 }
 
                 if (lastAttackedType == 1) {
-                    this.getTarget().setVelocity(this.getTarget().getVelocity().multiply(5, 5, 5));
-                    this.getTarget().addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 400, 1, true, true, true));
+                    Box box = new Box(this.getBlockPos()).expand(1.5f);
+                    this.getWorld().getOtherEntities(this, box).forEach(entity -> {
+                                if (entity instanceof LivingEntity livingEntity) {
+                                    livingEntity.damage(this.getDamageSources().generic(), 5f);
+                                    livingEntity.setVelocity(this.getTarget().getVelocity().multiply(5, 5, 5));
+                                    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 400, 1, true, true, true));
+                                }
+                            }
+                    );
                     spawnParticles();
                 }
             }
-        } catch (NullPointerException e) {
-            //ArtsByKevModMain.LOGGER.info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        } catch (NullPointerException ignored) {
         }
     }
 
@@ -238,7 +248,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
         BlockPos[] blocksPosArray = new BlockPos[]{pos, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8};
 
         for (BlockPos blockPos : blocksPosArray) {
-                this.getWorld().playSound(null, pos, this.getWorld().getBlockState(blockPos).getSoundGroup().getBreakSound(), SoundCategory.BLOCKS);
+            this.getWorld().playSound(null, pos, this.getWorld().getBlockState(blockPos).getSoundGroup().getBreakSound(), SoundCategory.BLOCKS);
         }
 
         if (!this.getWorld().isClient) {
