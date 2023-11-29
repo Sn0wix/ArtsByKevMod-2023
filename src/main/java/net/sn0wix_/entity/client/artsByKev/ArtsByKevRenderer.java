@@ -10,13 +10,14 @@ import net.sn0wix_.ArtsByKevModMain;
 import net.sn0wix_.entity.custom.ArtsByKevEntity;
 
 public class ArtsByKevRenderer extends MobEntityRenderer<ArtsByKevEntity, EntityModel<ArtsByKevEntity>> {
-    public static final Identifier TEXTURE = new Identifier(ArtsByKevModMain.MOD_ID, "textures/entity/arts_by_kev/arts_by_kev.png");
+    public static final Identifier TEXTURE = new Identifier(ArtsByKevModMain.MOD_ID, "textures/entity/arts_by_kev/arts_by_kev_normal.png");
+    public static final Identifier VIOLENT_TEXTURE = new Identifier(ArtsByKevModMain.MOD_ID, "textures/entity/arts_by_kev/arts_by_kev_violent.png");
     public ArtsByKevRenderer(EntityRendererFactory.Context context) {
         super(context, new PlayerEntityModel<>(context.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
 
     @Override
     public Identifier getTexture(ArtsByKevEntity entity) {
-        return TEXTURE;
+        return entity.isViolent() ? VIOLENT_TEXTURE : TEXTURE;
     }
 }

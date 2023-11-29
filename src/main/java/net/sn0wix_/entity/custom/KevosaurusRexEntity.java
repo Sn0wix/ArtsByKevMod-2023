@@ -68,6 +68,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     protected void initGoals() {
         this.goalSelector.add(1, new MeleeAttackGoal(this, 2.2, false));
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(6, new RevengeGoal(this, KevosaurusRexEntity.class, KevociraptorEntity.class));
 
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PigEntity.class, true));
