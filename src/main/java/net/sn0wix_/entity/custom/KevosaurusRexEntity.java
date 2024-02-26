@@ -148,7 +148,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     @Override
     public void tick() {
         super.tick();
-        if (!world.isClient) {
+        if (!this.getWorld().isClient) {
             try {
                 this.getLookControl().lookAt(this.getTarget());
             } catch (NullPointerException ignored) {

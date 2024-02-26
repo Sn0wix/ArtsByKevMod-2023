@@ -65,7 +65,7 @@ public class ArtsByKevEntity extends PathAwareEntity {
 
     @Override
     public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
-        if (world.isClient && !this.isDead()) {
+        if (player.getWorld().isClient && !this.isDead()) {
             player.sendMessage(Text.literal("<ArtsByKev> ").append(Text.translatable("text.artsbykevmod.subscribe").styled(style -> style.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.translatable("text.artsbykevmod.subscribe"))).withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.youtube.com/@ArtsByKev")).withColor(Formatting.BLUE).withBold(true).withUnderline(true))));
             if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE) && random.nextInt(15) == 0) {
                 try {

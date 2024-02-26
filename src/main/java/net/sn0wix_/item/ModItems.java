@@ -1,7 +1,6 @@
 package net.sn0wix_.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
@@ -26,16 +25,10 @@ public class ModItems {
 
 
     private static Item registerItem(String name, Item item){
-        Item item1 = Registry.register(Registries.ITEM,new Identifier(ArtsByKevModMain.MOD_ID,name),item);
-        addToItemGroup(item1);
-        return item1;
+        return Registry.register(Registries.ITEM,new Identifier(ArtsByKevModMain.MOD_ID,name),item);
     }
 
     public static void registerModItems(){
         ArtsByKevModMain.LOGGER.info("Registering Mod Items for " + ArtsByKevModMain.MOD_ID);
-    }
-
-    private static void addToItemGroup(Item item){
-        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.ARTS_BY_KEV_ITEM_GROUP).register(entries -> entries.add(item));
     }
 }
