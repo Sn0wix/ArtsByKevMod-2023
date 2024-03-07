@@ -70,11 +70,10 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     protected void initGoals() {
         this.goalSelector.add(1, new MeleeAttackGoal(this, 2.2, false));
         this.goalSelector.add(8, new WanderAroundFarGoal(this, 1.0));
-        this.goalSelector.add(6, new RevengeGoal(this, KevosaurusRexEntity.class, KevociraptorEntity.class));
+        this.goalSelector.add(6, new RevengeGoal(this, KevociraptorEntity.class));
         this.goalSelector.add(0, new SwimGoal(this));
 
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ArtsByKevEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PigEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WanderingTraderEntity.class, true));
@@ -306,5 +305,23 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     public void onStoppedTrackingBy(ServerPlayerEntity player) {
         super.onStoppedTrackingBy(player);
         this.bossBar.removePlayer(player);
+    }
+
+    @Override
+    public void onDeath(DamageSource damageSource) {
+        this.getWorld().createExplosion(this, getX(), getY(), getZ(), 4f, false, World.ExplosionSourceType.MOB);
+
+        if (!getWorld().isClient()) {
+            int kevs = (int) ((Math.random() + 1) * 40);
+
+            for (int i = 0; i < kevs; i++) {
+                try {
+                    ModEntities.ARTS_BY_KEV.spawn((ServerWorld) getWorld(), getBlockPos(), SpawnReason.MOB_SUMMONED).setInvulnerableFor(5, true)
+                            .setVelocity(Math.random(), Math.random() * 2, Math.random());
+                } catch (NullPointerException ignored) {}
+            }
+        }
+
+        super.onDeath(damageSource);
     }
 }
