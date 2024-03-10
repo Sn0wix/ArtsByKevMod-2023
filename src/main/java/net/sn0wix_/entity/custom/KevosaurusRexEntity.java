@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
@@ -31,6 +32,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.sn0wix_.entity.ModEntities;
+import net.sn0wix_.entity.ai.MMEntityMoveHelper;
+import net.sn0wix_.entity.ai.MMPathNavigateGround;
 import net.sn0wix_.networking.ModPackets;
 import net.sn0wix_.sounds.ModSounds;
 import org.jetbrains.annotations.Nullable;
@@ -62,8 +65,10 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private final Random random = new Random();
 
+
     public KevosaurusRexEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+        moveControl = new MMEntityMoveHelper(this, 90);
     }
 
     @Override
@@ -74,6 +79,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
         this.goalSelector.add(0, new SwimGoal(this));
 
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, ArtsByKevEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, PigEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WanderingTraderEntity.class, true));
@@ -153,7 +159,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
             } catch (NullPointerException ignored) {
             }
 
-            if (this.isAttacking() && random.nextInt(500) == 69 && roaringTicksLeft == 0 && attackTicksLeft == 0) {
+            if (this.isAttacking() && random.nextInt(1000) == 69 && roaringTicksLeft == 0 && attackTicksLeft == 0) {
                 startRoaring();
             }
 
@@ -281,6 +287,10 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
         roaringTicksLeft = 121;
     }
 
+    public boolean isRoaring() {
+        return roaringTicksLeft > 0;
+    }
+
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
@@ -308,6 +318,11 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
     }
 
     @Override
+    protected EntityNavigation createNavigation(World world) {
+        return new MMPathNavigateGround(this, world);
+    }
+
+    @Override
     public void onDeath(DamageSource damageSource) {
         this.getWorld().createExplosion(this, getX(), getY(), getZ(), 4f, false, World.ExplosionSourceType.MOB);
 
@@ -318,10 +333,13 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
                 try {
                     ModEntities.ARTS_BY_KEV.spawn((ServerWorld) getWorld(), getBlockPos(), SpawnReason.MOB_SUMMONED).setInvulnerableFor(5, true)
                             .setVelocity(Math.random(), Math.random() * 2, Math.random());
-                } catch (NullPointerException ignored) {}
+                } catch (NullPointerException ignored) {
+                }
             }
         }
 
         super.onDeath(damageSource);
     }
+
+
 }

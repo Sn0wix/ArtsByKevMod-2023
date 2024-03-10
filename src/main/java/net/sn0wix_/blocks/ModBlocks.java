@@ -12,7 +12,7 @@ import net.sn0wix_.ArtsByKevModMain;
 import net.sn0wix_.blocks.custom.KevBlock;
 
 public class ModBlocks {
-    public static final Block KEV_BLOCK = registerBlock("kev_block", new KevBlock(FabricBlockSettings.copy(Blocks.STONE)));
+    public static final Block KEV_BLOCK = registerBlock("kev_block", new KevBlock(FabricBlockSettings.copy(Blocks.STONE).noCollision()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
