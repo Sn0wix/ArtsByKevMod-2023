@@ -15,8 +15,5 @@ public class ModEntitySpawn {
 
         BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), SpawnGroup.MONSTER, ModEntities.KEVOCIRAPTOR, 15, 1, 4);
         SpawnRestriction.register(ModEntities.KEVOCIRAPTOR, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, (type, world, spawnReason, pos, random) -> true);
-
-        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), SpawnGroup.CREATURE, ModEntities.ARTS_BY_KEV, 10, 1, 4);
-        SpawnRestriction.register(ModEntities.ARTS_BY_KEV, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING, (type, world, spawnReason, pos, random) -> true);
     }
 }
