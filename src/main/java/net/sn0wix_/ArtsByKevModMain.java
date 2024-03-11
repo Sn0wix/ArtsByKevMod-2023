@@ -9,6 +9,7 @@ import net.sn0wix_.item.ModItems;
 import net.sn0wix_.networking.ModPackets;
 import net.sn0wix_.sounds.ModSounds;
 import net.sn0wix_.util.ModRegisteries;
+import net.sn0wix_.world.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib.GeckoLib;
@@ -26,6 +27,8 @@ public class ArtsByKevModMain implements ModInitializer {
 		ModPackets.registerC2SPackets();
 		ModEntities.registerModEntities();
 		ModItemGroup.registerItemGroup();
+
+		ModWorldGen.addModWorldGen();
 
 		GeckoLib.initialize();
 	}
