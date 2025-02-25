@@ -332,7 +332,7 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
 
             for (int i = 0; i < kevs; i++) {
                 try {
-                    ModEntities.ARTS_BY_KEV.spawn((ServerWorld) getWorld(), getBlockPos(), SpawnReason.MOB_SUMMONED).setInvulnerableFor(5, true)
+                    ModEntities.ARTS_BY_KEV.spawn((ServerWorld) getWorld(), getBlockPos(), SpawnReason.MOB_SUMMONED).setInvulnerableFor(5, false)
                             .setVelocity(Math.random(), Math.random() * 2, Math.random());
                 } catch (NullPointerException ignored) {
                 }
@@ -340,10 +340,5 @@ public class KevosaurusRexEntity extends HostileEntity implements GeoEntity {
         }
 
         super.onDeath(damageSource);
-    }
-
-
-    public static boolean canSpawn(EntityType<KevosaurusRexEntity> kevosaurusRexEntityEntityType, ServerWorldAccess serverWorldAccess, SpawnReason spawnReason, BlockPos blockPos, net.minecraft.util.math.random.Random random) {
-        return random.nextInt(10) == 0;
     }
 }

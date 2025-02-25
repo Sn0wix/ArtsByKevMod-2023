@@ -2,7 +2,6 @@ package net.sn0wix_;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.sn0wix_.entity.ModEntities;
 import net.sn0wix_.entity.client.artsByKev.ArtsByKevRenderer;
 import net.sn0wix_.entity.client.kevociraptor.KevociraptorRenderer;

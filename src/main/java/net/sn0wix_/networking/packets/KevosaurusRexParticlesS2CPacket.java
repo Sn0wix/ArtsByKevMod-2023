@@ -26,7 +26,7 @@ public class KevosaurusRexParticlesS2CPacket {
         for (BlockPos blockPos : blocksPosArray) {
             try {
                 client.world.addBlockBreakParticles(blockPos, client.world.getBlockState(blockPos));
-            }catch (NullPointerException ignored){}
+            } catch (NullPointerException ignored){}
         }
     }
 }
